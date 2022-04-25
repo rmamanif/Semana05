@@ -64,13 +64,13 @@ namespace Semana05
                     result = bCategoria.Insertar(new Categoria { NombreCategoria = txtNombre.Text, Descripcion = txtDescripcion.Text });
                 if (!result)
                 {
-                    MessageBox.Show("Comunicarse con el administrador  !");
+                    MessageBox.Show("error");
                 }
                 Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("Comunicarse con el administrador");
+                MessageBox.Show("err");
             }
             finally
             {
@@ -105,7 +105,7 @@ namespace Semana05
             }
             catch (Exception)
             {
-                MessageBox.Show("error");
+                MessageBox.Show("err");
             }
         }
     }

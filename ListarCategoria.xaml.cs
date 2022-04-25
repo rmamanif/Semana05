@@ -42,7 +42,7 @@ namespace Semana05
             }
             catch (Exception)
             {
-                MessageBox.Show("Comunicarse con el Administrador");
+                MessageBox.Show("error list");
             }
             finally
             {
