@@ -67,6 +67,12 @@ namespace Semana05
             manCategoria.ShowDialog();
             Cargar();
         }
+
+        private void BtnProducto_Click(object sender, RoutedEventArgs e)
+        {
+            ListarProducto listarProducto = new ListarProducto();
+            listarProducto.Show();
+        }
     }
 }
 
