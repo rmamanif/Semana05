@@ -56,38 +56,29 @@ namespace Semana05
             {
                 bProducto = new BProducto();
                 Console.WriteLine(ID);
+                Producto pnew = new Producto
+                {
+                    IdProducto = ID > 0 ? ID : 0,
+                    NombreProducto = txtNombre.Text,
+                    IdCategoria = Int32.Parse(txtCategoria.Text),
+                    IdProveedor = Int32.Parse(txtProveedor.Text),
+                    CantidadPorUnidad = txtCantidadUnidad.Text,
+                    PrecioUnidad = Int32.Parse(txtPrecioUnidad.Text),
+                    UnidadesEnExistencia = Int32.Parse(txtUnidadesExist.Text),
+                    UnidadesEnPedido = Int32.Parse(txtUnidadesPedido.Text),
+                    NivelNuevoPedido = Int32.Parse(txtNivelPedido.Text),
+                    Suspendido = Int32.Parse(txtSuspendido.Text),
+                    CategoriaProducto = txtCategoriaProducto.Text,
+                };
                 if (ID > 0)
                 {
-                    result = bProducto.Actualizar(new Producto
-                    {
+                   
 
-                        IdProducto = ID,
-                        NombreProducto = txtNombre.Text,
-                        IdCategoria = Int32.Parse(txtCategoria.Text),
-                        IdProveedor = Int32.Parse(txtProveedor.Text),
-                        CantidadPorUnidad = txtCantidadUnidad.Text,
-                        PrecioUnidad = Int32.Parse(txtPrecioUnidad.Text),
-                        UnidadesEnExistencia = Int32.Parse(txtUnidadesExist.Text),
-                        UnidadesEnPedido = Int32.Parse(txtUnidadesPedido.Text),
-                        NivelNuevoPedido = Int32.Parse(txtNivelPedido.Text),
-                        Suspendido = Int32.Parse(txtSuspendido.Text),
-                        CategoriaProducto = txtCategoriaProducto.Text,
-                    });
+                    result = bProducto.Actualizar(pnew);
                 }
                 else
                 {  
-                    result = bProducto.Insertar( new Producto{
-                        NombreProducto = txtNombre.Text,
-                        IdCategoria = Int32.Parse(txtCategoria.Text),
-                        IdProveedor = Int32.Parse(txtProveedor.Text),
-                        CantidadPorUnidad = txtCantidadUnidad.Text,
-                        PrecioUnidad = Int32.Parse(txtPrecioUnidad.Text),
-                        UnidadesEnExistencia = Int32.Parse(txtUnidadesExist.Text),
-                        UnidadesEnPedido = Int32.Parse(txtUnidadesPedido.Text),
-                        NivelNuevoPedido = Int32.Parse(txtNivelPedido.Text),
-                        Suspendido = Int32.Parse(txtSuspendido.Text),
-                        CategoriaProducto = txtCategoriaProducto.Text,
-                    });
+                    result = bProducto.Insertar(pnew);
 
                 }
                 Console.WriteLine(result);
