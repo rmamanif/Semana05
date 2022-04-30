@@ -5,8 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Semana05"
         mc:Ignorable="d"
-        Title="ManProducto" Height="450" Width="800">
+        Title="Mantenimiento producto" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="250px" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label>ID</Label>
+        <TextBox x:Name="txtId" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="1">Nombre</Label>
+        <TextBox x:Name="txtNombre" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="2">Proveedor</Label>
+        <TextBox x:Name="txtProveedor" Grid.Row="2" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="3">Categoria</Label>
+        <TextBox x:Name="txtCategoria" Grid.Row="3" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="4">Cantidad Por Unidad</Label>
+        <TextBox x:Name="txtCantidadUnidad" Grid.Row="4" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="5">Precio por Unidad</Label>
+        <TextBox x:Name="txtPrecioUnidad" Grid.Row="5" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="6">Unidades en existencia</Label>
+        <TextBox x:Name="txtUnidadesExist" Grid.Row="6" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="7">Unidades en pedido</Label>
+        <TextBox x:Name="txtUnidadesPedido" Grid.Row="7" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="8">Nivel nuevo de pedido</Label>
+        <TextBox x:Name="txtNivelPedido" Grid.Row="8" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="9">Suspendido</Label>
+        <TextBox x:Name="txtSuspendido" Grid.Row="9" Grid.Column="1" Margin="0,0,0,10" />
+        <Label Grid.Row="10">Categoria Producto</Label>
+        <TextBox x:Name="txtCategoriaProducto" Grid.Row="10" Grid.Column="1" AcceptsReturn="True" />
+        <Button Grid.Row="11" x:Name="btnGrabar" Click="BtnGrabar_Click" >Grabar</Button>
+        <Button Grid.Row="12" x:Name="btnEliminar" Click="BtnEliminar_Click"  >Eliminar</Button>
+        <Button Grid.Row="13" x:Name="btnCerrar" Click="BtnCerrar_Click"  >Cerrar</Button>
+
     </Grid>
 </Window>
