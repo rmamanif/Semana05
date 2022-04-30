@@ -61,7 +61,7 @@ namespace Semana05
             int idProducto;
             var item = (Producto)dgvProducto.SelectedItem;
             if (null == item) return;
-            idProducto = Convert.ToInt32(item.IdCategoria);
+            idProducto = Convert.ToInt32(item.IdProducto);
             ManProducto manProducto = new ManProducto(idProducto);
             manProducto.ShowDialog();
             Cargar();
