@@ -55,7 +55,7 @@ namespace Semana05
             try
             {
                 bProducto = new BProducto();
-
+                Console.WriteLine(ID);
                 if (ID > 0)
                 {
                     result = bProducto.Actualizar(new Producto
@@ -71,7 +71,7 @@ namespace Semana05
                         UnidadesEnPedido = Int32.Parse(txtUnidadesPedido.Text),
                         NivelNuevoPedido = Int32.Parse(txtNivelPedido.Text),
                         Suspendido = Int32.Parse(txtSuspendido.Text),
-                        CategoriaProducto = txtCategoria.Text,
+                        CategoriaProducto = txtCategoriaProducto.Text,
                     });
                 }
                 else
@@ -86,11 +86,11 @@ namespace Semana05
                         UnidadesEnPedido = Int32.Parse(txtUnidadesPedido.Text),
                         NivelNuevoPedido = Int32.Parse(txtNivelPedido.Text),
                         Suspendido = Int32.Parse(txtSuspendido.Text),
-                        CategoriaProducto = txtCategoria.Text,
+                        CategoriaProducto = txtCategoriaProducto.Text,
                     });
 
                 }
-                
+                Console.WriteLine(result);
                 if (!result)
                 {
                     MessageBox.Show("resultado inexistente");
